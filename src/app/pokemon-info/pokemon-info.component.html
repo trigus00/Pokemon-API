@@ -1,0 +1,86 @@
+
+<div class= " pokedex-container" style = "margin: 100px 100px">
+
+<div class="container" >
+  <div class="leftSide">
+    <div class="leftCurve">
+      <div class="blueLight">
+        <div class="blueLightReflect"></div>
+      </div>
+      <div class="redLight"></div>
+      <div class="yellowLight"></div>
+      <div class="greenLight"></div>
+    </div>
+    <div class="middleCurve"></div>
+    <div class="rightCurve"></div>
+    <div class="frameScreen">
+      <div class="screen">
+        <div class="name" style="text-align: center;">
+          {{this.pokemonName|uppercase}}
+        </div>
+        <div class="img">
+          <img id = pokeImage [src]="imageURL" style="max-width: 100px; display: block; margin: 0,auto;" alt="Image of pokemon">
+          <p >{{this.infoPokemon}}</p>
+          </div>
+
+      </div>
+    </div>
+    <div class="redDot"></div>
+    <div class="grill"></div>
+  </div>
+  <div class="buttons">
+    <button class="blueButton" (click) ="getShinyPhoto()" style = "margin-left: 100px ">
+      <p>Shiny Front </p>
+    </button>
+      <button class = blueButton2 (click)= "getShinyBackPhoto()"style = "margin-left: 100px" >
+      <p> Shiny back</p>
+    </button>
+    
+    <button  class="start" (click)= "getFrontPhoto()">
+      <p>Front</p>
+    </button>
+    <button class="select" (click)= "getBackPhoto()">
+      <p>Back</p>
+    </button>
+  </div>
+  <div class="input"  >
+    <p style="text-align: start;"> RESEARCH:</p>
+    <input type="text" [(ngModel)]="searchTerm" [(ngModel)]="searchTerm" placeholder="enter a pokemon ..."
+      style="margin-left:20px; text-align: center;">
+    <button type = "button" class= "btn btn-success"(click)="getPokemon()" style="margin-left:10px ">Search</button>
+  </div>
+  <div class="cross"></div>
+</div>
+<div class="rightSide" style="size: 50%;">
+  <div class="height">
+    <p>Height</p>
+    <p class="heightText">{{this.heightInFt}} ft</p>
+  </div>
+  <div class="weight">
+    <p>Weight</p>
+    <p class="weightText">{{this.weightInLb}} lb</p>
+  </div>
+  <div class="types">
+    <p>Types</p>
+    <p class="typeText" style="font-size: medium;">{{this.type}}</p>
+  </div>
+  <div class = "catch_rate" >
+    <p>Catch rate</p>
+    <p class="weightText" *ngIf ="catchRate != 0"> {{this.catchRate}}% </p>
+  </div>
+  <div class="stats">
+    <p>Statistics</p>
+    <div class="statFrame" style="width:min-content; " >
+      <div class="chart" style = "margin-left: 3vh;">
+        <div style="display: block">
+          <canvas baseChart 
+          [data]="radarChartData" 
+          [options]="radarChartOptions" 
+          [type]="radarChartType"
+          [legend]="false">
+          </canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
