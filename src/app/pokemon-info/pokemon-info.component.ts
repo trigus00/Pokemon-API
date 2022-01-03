@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ChartConfiguration, ChartData, ChartType } from 'chart.js';
 
+
 import { BaseChartDirective } from 'ng2-charts';
 import { PokemonService } from '../pokemon.service';
 
@@ -78,7 +79,6 @@ export class PokemonInfoComponent implements OnInit {
        this.imageURL = this.pictures.front_default;
         
 
-    
     }
 
     getBackPhoto() {

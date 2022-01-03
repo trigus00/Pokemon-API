@@ -11,6 +11,7 @@ import { NgChartsModule } from 'ng2-charts';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { NgChartsModule } from 'ng2-charts';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgChartsModule
+    NgChartsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

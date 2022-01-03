@@ -7,7 +7,7 @@ import { ChartConfiguration, ChartData, ChartType } from 'chart.js';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Pokedex 2.0 ';
+  // title = 'Pokedex 2.0 ';
 
   constructor() { }
   
