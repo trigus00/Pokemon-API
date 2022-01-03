@@ -54,7 +54,7 @@ describe('PokemonService', () => {
       (done)
     })
   })
-//  it('test', inject([PokemonService],async (pokemonService:PokemonService) => {
+//  it('test', inject([PokemonService],async (pok smonService:PokemonService) => {
 //     const result = await pokemonService.getPokemon('charizard')
 //     .subscribe((response:any)=>{
 //       name = response.name
